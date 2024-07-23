@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css滤镜</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .item {
+            margin-bottom: 40px;
+            padding: 0 10px 10px;
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        p {
+            padding: 10px;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* 明暗度 */
+        .brightness {
+            filter: brightness(3);
+        }
+
+        /* 对比度 */
+        .contrast {
+            filter: contrast(2);
+        }
+
+        /* 灰度 */
+        .grayscale {
+            filter: grayscale(0.4);
+        }
+
+        /* 深褐色 */
+        .sepia {
+            filter: sepia(0.8);
+        }
+
+        /* 饱和度 */
+        .saturate {
+            filter: saturate(5);
+        }
+
+        /* 反转 */
+        .invert {
+            filter: invert(1);
+        }
+
+        /* 色相 */
+        .hue-rotate {
+            filter: hue-rotate(10deg);
+        }
+
+        /* 透明度 */
+        .opacity {
+            filter: opacity(0.5);
+        }
+
+        /* 阴影 */
+        .drop-shadow {
+            filter: drop-shadow(10px 10px 20px #000);
+        }
+
+        /* 模糊 */
+        .blur {
+            filter: blur(5px);
+        }
+
+        .relative {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cover {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            font-size: 50px;
+        }
+
+        /* 背后模糊 */
+        .backdrop-filter {
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <p>明暗度 brightness</p>
+        <img class="brightness" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>对比度 contrast</p>
+        <img class="contrast" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>灰度 grayscale</p>
+        <img class="grayscale" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>深褐色 sepia</p>
+        <img class="sepia" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>饱和度 saturate</p>
+        <img class="saturate" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>反转 invert</p>
+        <img class="invert" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>色相 hue-rotate</p>
+        <img class="hue-rotate" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>透明度 opacity</p>
+        <img class="opacity" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>阴影 drop-shadow</p>
+        <img class="drop-shadow" src="./1.jpg" alt="">
+        <img class="drop-shadow" src="./2.png" alt="">
+    </div>
+    <div class="item">
+        <p>模糊 blur</p>
+        <img class="blur" src="./1.jpg" alt="">
+    </div>
+    <div class="item">
+        <p>背后模糊 backdrop-filter</p>
+        <div class="relative">
+            <div class="cover backdrop-filter">阳光宅男</div>
+            <img class="" src="./1.jpg" alt="">
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
